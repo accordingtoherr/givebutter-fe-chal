@@ -56,5 +56,7 @@ Please take some time to answer the following questions. Your answers should go 
     - I would like to add photos per item to improve the UX and would consider having the Pokemon details route to a new page instead of having everything on one page. For example, you would click on the button and get routed to a new page with all pokemon information nicely displayed
     - For the buttons and text in search results, I would edit the styles so that all buttons are in-line. The mockup had buttons and text align center within the boxes with the black borders but I feel it would look a lot nicer for a user if the buttons are aligned to one another
 
+    - Also, I followed the mockup and only had 8 items on the page at once but I would like to have a scroll functionality and allow all the items to be there
+
 - What was the most challenging aspect of this work for you (if at all)?
      - I did not find this challenging it felt like a very reasonable and fair assessment of my react skills

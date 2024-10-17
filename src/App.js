@@ -71,7 +71,7 @@ function App() {
         <div className={"pokedex__content"}>
           {pokemon.length > 0 && (
             <div className={"pokedex__search-results"}>
-              {pokemon.map((monster) => {
+              {pokemon.slice(0, 9).map((monster) => {
                 return (
                   <div className={"pokedex__list-item"} key={monster.name}>
                     <div>{monster.name}</div>

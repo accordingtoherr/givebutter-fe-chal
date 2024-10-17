@@ -52,11 +52,14 @@ Please take some time to answer the following questions. Your answers should go 
 
 - Is there anything you would consider doing if we were to go live with this app? 
     - I would like to break the pieces into components. For example, the search results can be a component that takes the input of the data for the button and the name of the pokemon. The piece that appears on click of a button could also be its own component that is only rendered to the page when you click on the button. By adding these into separate components our app.js file stays clean and easy to read and it will make it easier if we were to add more features or scale the application
+
     - I would also like to improve the UX and design, to make it more sleek and modern would consider using tailwind or something simiar
+
     - I would like to add photos per item to improve the UX and would consider having the Pokemon details route to a new page instead of having everything on one page. For example, you would click on the button and get routed to a new page with all pokemon information nicely displayed
+
     - For the buttons and text in search results, I would edit the styles so that all buttons are in-line. The mockup had buttons and text align center within the boxes with the black borders but I feel it would look a lot nicer for a user if the buttons are aligned to one another
 
-    - Also, I followed the mockup and only had 8 items on the page at once but I would like to have a scroll functionality and allow all the items to be there
+    - Also, I followed the mockup to have the search results scrollable but not showing the scrollbar, I would keep the scrollbar and style it to match a look and feel so it is more clear to a user this is a scroll bar
 
 - What was the most challenging aspect of this work for you (if at all)?
      - I did not find this challenging it felt like a very reasonable and fair assessment of my react skills

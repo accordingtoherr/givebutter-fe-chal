@@ -34,9 +34,9 @@ function App() {
     const onSearchValueChange = (event) => {
         const value = event.target.value
         setSearchValue(value)
-        console.log(pokemonDetails)
         setPokemon(
-            pokemon.filter(monster => monster.name.includes(value))     
+            pokemon.filter(monster => 
+                monster.name.includes(value))     
         )
         //this handles if there is nothing in search, then we set the pokemon monster data to show everything for a good UX, since a user should not have to refresh page//
         if (value === "") {
@@ -71,7 +71,7 @@ function App() {
         <div className={"pokedex__content"}>
           {pokemon.length > 0 && (
             <div className={"pokedex__search-results"}>
-              {pokemon.slice(0, 9).map((monster) => {
+              {pokemon.map((monster) => {
                 return (
                   <div className={"pokedex__list-item"} key={monster.name}>
                     <div>{monster.name}</div>
@@ -80,7 +80,15 @@ function App() {
                     </button>
                   </div>
                 );
+                
               })}
+              
+            </div>
+          )}
+           {pokemon.length === 0 && (
+            <div className={"pokedex__search-results none"}>
+             <div>No Results Found</div>
+              
             </div>
           )}
           {pokemonDetails && (

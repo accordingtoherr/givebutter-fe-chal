@@ -30,6 +30,18 @@ body {
 .pokedex__search-results {
   align-items: left;
   border: 2px solid red;
+  height: 32rem;
+  overflow-x: scroll;
+}
+.pokedex__search-results.none {
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 .pokedex__list-item {

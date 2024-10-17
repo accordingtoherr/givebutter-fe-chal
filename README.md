@@ -47,7 +47,14 @@ When you are finished, please upload your completed work to your Github and invi
 Please take some time to answer the following questions. Your answers should go directly in this `readme`.
 
 - Given more time, what would you suggest for improving the performance of this app?
+    -  - I would like to add a search button so the search is done just when you click the button not for every word typed - would improve performance since you are only making a call once and can free up the event queue  
+    - I would also like to add a debouncer which would improve the performance of the search functionality by adding a slight delay. Also for the "moves" section, I selected 5 items of the array - since every Pokemon has a lot of capabilities and I wanted to match the design and not have 100 moves. I would like to add a limit for those or even a search filter functionality within the pokemon details, this way a user can see all moves and can search for a specific one if needed
 
-- Is there anything you would consider doing if we were to go live with this app?
+- Is there anything you would consider doing if we were to go live with this app? 
+    - I would like to break the pieces into components. For example, the search results can be a component that takes the input of the data for the button and the name of the pokemon. The piece that appears on click of a button could also be its own component that is only rendered to the page when you click on the button. By adding these into separate components our app.js file stays clean and easy to read and it will make it easier if we were to add more features or scale the application
+    - I would also like to improve the UX and design, to make it more sleek and modern would consider using tailwind or something simiar
+    - I would like to add photos per item to improve the UX and would consider having the Pokemon details route to a new page instead of having everything on one page. For example, you would click on the button and get routed to a new page with all pokemon information nicely displayed
+    - For the buttons and text in search results, I would edit the styles so that all buttons are in-line. The mockup had buttons and text align center within the boxes with the black borders but I feel it would look a lot nicer for a user if the buttons are aligned to one another
 
 - What was the most challenging aspect of this work for you (if at all)?
+     - I did not find this challenging it felt like a very reasonable and fair assessment of my react skills

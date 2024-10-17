@@ -30,7 +30,8 @@ body {
 .pokedex__search-results {
   align-items: left;
   border: 2px solid red;
-  height: 32rem;
+  min-height: 2rem;
+  max-height: 32rem;
   overflow-x: scroll;
 }
 .pokedex__search-results.none {

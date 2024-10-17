@@ -62,7 +62,9 @@ function App() {
     return (
       <div className={"pokedex__container"}>
         <div className={"pokedex__search-input"}>
+        <label class="search-label" for="search"></label>
           <input
+            id="search"
             value={searchValue}
             onChange={onSearchValueChange}
             placeholder={"Search Pokemon"}
@@ -70,7 +72,8 @@ function App() {
         </div>
         <div className={"pokedex__content"}>
           {pokemon.length > 0 && (
-            <div className={"pokedex__search-results"}>
+            <div 
+            className={"pokedex__search-results"}>
               {pokemon.map((monster) => {
                 return (
                   <div className={"pokedex__list-item"} key={monster.name}>
@@ -79,11 +82,12 @@ function App() {
                       Get Details
                     </button>
                   </div>
+                
                 );
                 
               })}
-              
-            </div>
+                </div>
+   
           )}
            {pokemon.length === 0 && (
             <div className={"pokedex__search-results none"}>
@@ -91,6 +95,7 @@ function App() {
               
             </div>
           )}
+
           {pokemonDetails && (
             <div className={"pokedex__details"}>
               <h2>{pokemonDetails.name}</h2>

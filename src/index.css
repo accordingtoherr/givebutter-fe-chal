@@ -15,6 +15,7 @@ body {
 
 .pokedex__content {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   gap: 5rem;
 }

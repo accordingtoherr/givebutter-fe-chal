@@ -18,15 +18,6 @@ function App() {
         fetchPokemon().then(() => {
             /** noop **/
         })
-        const fetchData = async (name) => {
-            const response = await fetchPokemonDetailsByName(name)
-             const newData = await response.json()
-             console.log('new', newData)
-         };
- 
-        fetchData().then(() => {
-
-        })
         /* we did not need the condition 
         since we only need to make the 
         api call once we do not need to make the call every time we search 

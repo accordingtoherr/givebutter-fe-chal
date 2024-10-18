@@ -66,6 +66,8 @@ Please take some time to answer the following questions. Your answers should go 
 
     - Also, I followed the mockup to have the search results scrollable but not showing the scrollbar, I would keep the scrollbar and style it to match a look and feel so it is more clear to a user this is a scroll bar
 
+    - For the part of the feature where you click on the button and the Pokemon Details populate, it would improve UX if there is an "enabled" state on the buttons, so it is visually clear that a certain Pokemon's information is shown on the right-hand side because its respective button was clicked on the left-hand side
+
     - If I would to take this to production I would also like to utilize scss so that I can take advantage of nesting and css variables which can make the css file a little cleaner
 
 - What was the most challenging aspect of this work for you (if at all)?

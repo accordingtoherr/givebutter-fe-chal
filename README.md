@@ -48,6 +48,27 @@ Please take some time to answer the following questions. Your answers should go 
 
 - Given more time, what would you suggest for improving the performance of this app?
 
-- Is there anything you would consider doing if we were to go live with this app?
+    - I would like to add a search button so the search is done just when you click the button not for every word typed - would improve performance since you are only making a call once and can free up the event queue  
+
+    - I would also like to add a debouncer which would improve the performance of the search functionality by adding a slight delay. 
+    
+    - Also for the "moves" section, I selected 5 items of the array - since every Pokemon has a lot of capabilities and I wanted to match the design (which had 3 moves_ and not have 100 moves. I would like to add a limit for those or even a search filter functionality within the pokemon details, this way a user can see all moves and can search for a specific one if needed. Making this area also scrollable is also a good option
+
+- Is there anything you would consider doing if we were to go live with this app? 
+
+    - I would like to break the pieces into components. For example, the search results can be a component that takes the input of the data for the button and the name of the pokemon. The piece that appears on click of a button could also be its own component that is only rendered to the page when you click on the button. By adding these into separate components our app.js file stays clean and easy to read and it will make it easier if we were to add more features or scale the application
+
+    - I would also like to improve the UX and design, to make it more sleek and modern would consider using tailwind or something simiar
+
+    - I would like to add photos per item to improve the UX and would consider having the Pokemon details route to a new page instead of having everything on one page. For example, you would click on the button and get routed to a new page with all pokemon information nicely displayed
+
+    - For the buttons and text in search results, I would edit the styles so that all buttons are in-line. The mockup had buttons and text align center within the boxes with the black borders but I feel it would look a lot nicer for a user if the buttons are aligned to one another
+
+    - Also, I followed the mockup to have the search results scrollable but not showing the scrollbar, I would keep the scrollbar and style it to match a look and feel so it is more clear to a user this is a scroll bar
+
+    - For the part of the feature where you click on the button and the Pokemon Details populate, it would improve UX if there is an "enabled" state on the buttons, so it is visually clear that a certain Pokemon's information is shown on the right-hand side because its respective button was clicked on the left-hand side
+
+    - If I would to take this to production I would also like to utilize scss so that I can take advantage of nesting and css variables which can make the css file a little cleaner
 
 - What was the most challenging aspect of this work for you (if at all)?
+     - I did not find this challenging it felt like a very reasonable and fair assessment of my react skills

@@ -18,10 +18,7 @@ function App() {
         fetchPokemon().then(() => {
             /** noop **/
         })
-        /* we did not need the condition 
-        since we only need to make the 
-        api call once we do not need to make the call every time we search 
-        */
+        //the dependency was causing the bug and causing the page to rerender since we were passing the same value every time a user searched//
     }, [])
 
 

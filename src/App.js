@@ -27,7 +27,10 @@ function App() {
         fetchData().then(() => {
 
         })
-        //we did not need the condition since we only need to make the api call once we do not need to make the call every time we search, //
+        /* we did not need the condition 
+        since we only need to make the 
+        api call once we do not need to make the call every time we search 
+        */
     }, [])
 
 
@@ -38,7 +41,10 @@ function App() {
             pokemon.filter(monster => 
                 monster.name.includes(value))     
         )
-        //this handles if there is nothing in search, then we set the pokemon monster data to show everything for a good UX, since a user should not have to refresh page//
+        /*this handles if there is nothing in search, 
+        then we set the pokemon monster data to show everything 
+        for a good UX, since a user should not have to refresh page after clearing search input box*/
+
         if (value === "") {
           setPokemon(pokemonIndex);
         }
@@ -48,6 +54,8 @@ function App() {
     try {
         const data = await (await fetchPokemonDetailsByName(name))
        setPokemonDetails(data)
+       /*making call to evolution by id api which takes an id per 
+       pokemon which is already passed in pokemonDetails state */
        const evolutionData = await (await fetchEvolutionChainById(data.id))
        setPokemonEvolution(evolutionData)
     } catch (err) {
@@ -82,17 +90,15 @@ function App() {
                       Get Details
                     </button>
                   </div>
-                
                 );
                 
               })}
-                </div>
-   
+            </div>
           )}
+
            {pokemon.length === 0 && (
             <div className={"pokedex__search-results none"}>
-             <div>No Results Found</div>
-              
+             <div>No Results Found</div> 
             </div>
           )}
 
@@ -103,16 +109,16 @@ function App() {
                 <h3>
                   Types
                   <ul>
-                    {pokemonDetails.types.map((t) => (
-                      <li key={t.slot}>{t.type.name}</li>
+                    {pokemonDetails.types.map((type) => (
+                      <li key={type.slot}>{type.type.name}</li>
                     ))}
                   </ul>
                 </h3>
                 <h3>
                   Moves
                   <ul>
-                    {pokemonDetails.moves.slice(0, 4).map((m) => (
-                      <li key={m.url}>{m.move.name}</li>
+                    {pokemonDetails.moves.slice(0, 4).map((move) => (
+                      <li key={move.url}>{move.move.name}</li>
                     ))}
                   </ul>
                 </h3>
@@ -120,14 +126,14 @@ function App() {
               
               <h3 className="pokedex_evol-header">Evolutions</h3>
               <div className="pokedex_evols">
-              <div>{pokemonDetails.species.name}</div>
-              <div>{pokemonEvolution?.chain?.evolves_to[0]?.species?.name}</div>
-              <div>
-                {
-                  pokemonEvolution?.chain?.evolves_to[0]?.evolves_to[0]?.species
-                    ?.name
-                }
-              </div>
+                <div>{pokemonDetails.species.name}</div>
+                <div>{pokemonEvolution?.chain?.evolves_to[0]?.species?.name}</div>
+                <div>
+                  {
+                    pokemonEvolution?.chain?.evolves_to[0]?.evolves_to[0]?.species
+                      ?.name
+                  }
+                </div>
               </div>
             </div>
           )}
